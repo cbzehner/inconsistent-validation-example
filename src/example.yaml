@@ -2,6 +2,7 @@ name: yaml_app
 version: "1.0"
 about: an example using a .yaml file to build a CLI
 author: Kevin K. <kbknapp@gmail.com>
+extra_data: App-level fields do not cause a validation error.
 
 # AppSettings can be defined as a list and are **not** ascii case sensitive
 settings:
@@ -18,6 +19,7 @@ args:
         long: option
         multiple: true
         takes_value: true
+        moar_data: Arg-level fields do cause a validation error. 
     - pos:
         help: example positional argument from yaml
         index: 1
